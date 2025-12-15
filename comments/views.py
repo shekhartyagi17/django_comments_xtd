@@ -19,8 +19,8 @@ class XtdCommentListCreateView(generics.ListCreateAPIView):
             serializer.save()
             return Response(
                 {
-                    'status': 'success',
-                    'message': 'Extended comment created successfully',
+                    'status': 'true',
+                    'message': 'Extended comment created truefully ',
                     'data': serializer.data
                 },
                 status=status.HTTP_201_CREATED
@@ -39,8 +39,8 @@ class XtdCommentListCreateView(generics.ListCreateAPIView):
         serializer = self.get_serializer(queryset, many=True)
         return Response(
             {
-                'status': 'success',
-                'message': 'Extended comments retrieved successfully',
+                'status': 'true',
+                'message': 'Extended comments retrieved truefully',
                 'data': serializer.data,
                 'count': len(serializer.data)
             },
@@ -59,8 +59,8 @@ def xtd_comments_by_application(request, application_id):
         serializer = CustomXtdCommentSerializer(comments, many=True)
         return Response(
             {
-                'status': 'success',
-                'message': f'Extended comments for application {application_id} retrieved successfully',
+                'status': 'true',
+                'message': f'Extended comments for application {application_id} retrieved truefully',
                 'data': serializer.data,
                 'count': len(serializer.data)
             },
@@ -89,8 +89,8 @@ def xtd_comments_by_application(request, application_id):
 #             serializer.save()
 #             return Response(
 #                 {
-#                     'status': 'success',
-#                     'message': 'Comment created successfully',
+#                     'status': 'true',
+#                     'message': 'Comment created truefully',
 #                     'data': serializer.data
 #                 },
 #                 status=status.HTTP_201_CREATED
@@ -109,8 +109,8 @@ def xtd_comments_by_application(request, application_id):
 #         serializer = self.get_serializer(queryset, many=True)
 #         return Response(
 #             {
-#                 'status': 'success',
-#                 'message': 'Comments retrieved successfully',
+#                 'status': 'true',
+#                 'message': 'Comments retrieved truefully',
 #                 'data': serializer.data,
 #                 'count': len(serializer.data)
 #             },
@@ -130,8 +130,8 @@ def xtd_comments_by_application(request, application_id):
 #         serializer = self.get_serializer(instance)
 #         return Response(
 #             {
-#                 'status': 'success',
-#                 'message': 'Comment retrieved successfully',
+#                 'status': 'true',
+#                 'message': 'Comment retrieved truefully',
 #                 'data': serializer.data
 #             },
 #             status=status.HTTP_200_OK
@@ -148,8 +148,8 @@ def xtd_comments_by_application(request, application_id):
 #         serializer = CommentSerializer(comments, many=True)
 #         return Response(
 #             {
-#                 'status': 'success',
-#                 'message': f'Comments for application {application_id} retrieved successfully',
+#                 'status': 'true',
+#                 'message': f'Comments for application {application_id} retrieved truefully',
 #                 'data': serializer.data,
 #                 'count': len(serializer.data)
 #             },
